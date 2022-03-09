@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Stanley's ridiculously amazing rocketry website!!!!!!!!</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	
+	<ol>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="factsvideos.html">Facts & Videos</a></li>
+		<li><a href="statsutilites.html">Stats & Utilites</a></li>
+		<li><a href="quiz.html">Trivia</a></li>
+		<li><a href="interactive.html">Interactive Page</a></li>
+	</ol>
+	
+	<p>
+		<button id="a" class="button off" onclick="tappedPowerButton()">power on</button>
+		<button id="b" class="button inactive" onclick="tappedButton('b')">Igniter system</button>
+		<button id="c" class="button inactive" onclick="tappedButton('c')">Oxygen</button>
+		<button id="d" class="button inactive" onclick="tappedButton('d')">Nitrous Oxide</button>
+		<button id="e" class="button inactive" onclick="tappedButton('e')">e?</button>
+		<button id="f" class="button inactive" onclick="tappedButton('f')">f?</button>
+	</p>
+	
+	
+	<script>
+		var powerstatus = false;
+		function activatebuttons(){
+			let buttons = document.getElementsByClassName('button');
+			
+			for(let i = 0; i < buttons.length; i++){
+				buttons[i].className = "button off";
+			}
+		}
+		
+		function turnPowerButtonOn(){
+			let powerButton = document.getElementById('a');
+			powerButton.className = "button on";
+		}
+		
+		function toggleButtonWithID(id){
+			let x = document.getElementById(id);			
+		
+			if (x.className == "button off") {
+				x.className = "button on";
+			} else if (x.className == "button on") {
+				x.className = "button off";  
+			}
+		}
+		
+		function deactivatebuttons(){
+			let buttons document.getElementsByClassName('button')
+			for (let i = 0; i < buttons.length; i++){
+				buttons[i].className = 'button inactive';
+			}
+			let powerbutton = document.getElementById('a')
+			powerbutton.className('button off');
+		}
+		
+		function tappedPowerButton(){
+		
+			powerstatus = !powerstatus;
+			
+			if (powerstatus){
+				activatebuttons();
+				turnPowerButtonOn();
+			} else {
+				deactivatebuttons();
+			}
+		}
+		
+		function tappedButton(input){
+			if (powerstatus){
+				toggleButtonWithID(input);
+			} else {
+				deactivatebuttons()
+				console.log('Power is off, so button cannot be turned on');
+				return 0;
+			}
+		}
+		
+	</script>
+	
+	
+	
+	
+	
+	
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+body{
+	background-image: url("photos/stars3-dimmed.png");
+	background-attachment: fixed;
+	color: white;
+	font-family: impact;
+	padding: 40px;
+}
+
+a {
+	color: white;
+	
+}
+
+a:hover {
+	color: red;
+}
+
+
+.container {
+	width: 350px;
+	height: 350px;
+}
+
+
+.container > button{
+	width: 100px;
+	height: 100px;
+/*     float: left; */
+/*     margin: 15px; */
+	font-family: "impact";
+	font-size: 100px;
+	line-height: 10px;
+	vertical-align: bottom;
+}
+
+.container > .inactive{
+	color: rgb(164, 158, 158)
+}
+
+.container > .cross{
+	background-color: rgb(255, 0, 0);
+}
+
+.container > .nought{
+	background-color: rgb(0, 252, 50);
+
+}

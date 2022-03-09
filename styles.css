@@ -1,0 +1,39 @@
+body {
+	background-image: url("photos/stars3-dimmed.png");
+	background-attachment: fixed;
+	color: white;
+	font-family: impact;
+	padding: 40px;
+	
+}
+
+a {
+	color: white;
+	
+}
+
+a:hover {
+	color: red;
+}
+
+button{
+	font-family: "courier new";
+	padding:  15px;
+	border:  2pt black solid;
+	background-color: #111;
+}
+
+.on{
+	color:  green;
+}
+
+.off{
+	color: rgb(255, 0, 0);
+}
+
+.inactive{
+	color: rgb(128, 117, 117);
+}
+
+
+
